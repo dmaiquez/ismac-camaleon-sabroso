@@ -15,10 +15,10 @@ public class DetallePedidos {
 	@Column(name = "id_detalle_pedidos")
 	private int idDetallePedidos;
 
-	@Column(name = "id_Pedido")
+	@Column(name = "id_pedido")
 	private int IdPedido;
 
-	@Column(name = "id_Producto")
+	@Column(name = "id_producto")
 	private int IdProducto;
 
 	@Column(name = "cantidad")
