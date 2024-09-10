@@ -78,6 +78,11 @@
                     <i class="fa-solid fa-box"></i> Servicio al Cliente
                 </a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/ismac-camaleon-sabroso/">
+                    <i class="fa-solid fa-house"></i> Home
+                </a>
+            </li>
             <!-- Más elementos del menú -->
              <li class="nav-item">
                 <a class="nav-link" href="/ismac-camaleon-sabroso/detallepedidos/findAll">
@@ -191,7 +196,10 @@
     <!-- Main Content -->
     <div class="container-fluid" style="margin-top: 56px;">
         <div class="content p-3">
-            Contenido adicional aquí
+            
+            
+            <iframe title="camaleon sabroso" width="1340" height="841.25" src="https://app.powerbi.com/reportEmbed?reportId=cceb10d0-048a-4bcc-8f16-47378cdd64e5&autoAuth=true&ctid=8305a4c8-98a6-4d10-97cc-b2f42afeb4d8" frameborder="0" allowFullScreen="true"></iframe>
+            
         </div>
     </div>
 
