@@ -19,7 +19,7 @@
 				Agregar
 			</button>
 			            <!-- Botón de regresar -->
-            <button class="btn btn-secondary" onclick="window.location.href='http://localhost:8080/ismac-camaleon-sabroso/';">
+            <button class="btn btn-secondary" onclick="window.location.href='/ismac-camaleon-sabroso/';">
                 <i class="fa-solid fa-arrow-left"></i> <!-- Icono de regresar -->
                 Regresar
             </button>

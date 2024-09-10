@@ -20,11 +20,11 @@
     
         <h1>Agregar Clientes</h1>
         
-			<form action="${pageContext.request.contextPath}/clientes/add" method="post">
+			<form action="${pageContext.request.contextPath}/clientes/add" method="post" class="needs-validation" novalidate>
 			    <input type="hidden" name="idcliente" value="${cliente.idclientes}" />
 			    <div class="form-group">
 			        <label for="nombre">Nombre:</label>
-			        <input type="text" class="form-control" id="nombre" name="Nombre" value="${cliente.nombre}" required />
+			        <input type="text" class="form-control" id="nombre" name="nombre" value="${cliente.nombre}" required />
 			    </div>
 			    <div class="form-group">
 			        <label for="direccion">Dirección:</label>

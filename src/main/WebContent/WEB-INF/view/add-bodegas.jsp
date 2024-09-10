@@ -77,21 +77,40 @@
 <section class="px-5 py-5">
     <div class="container">
         <div class="form-container">
-            <form action="add" method="post">
+            <form action="add" method="post" class="needs-validation" novalidate>
                 <input type="hidden" id="idBodegas" name="idBodegas" value="${bodegas.idBodegas}" />
-                
-                <label for="nombre">Nombre</label>
-                <input type="text" id="nombre" name="nombre" value="${bodegas.nombre}"/>
-                
+
+
+                <%-- <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" value="${bodegas.nombre}" required/> 
+
                 <label for="ubicacion">Ubicación</label>
                 <input type="text" id="ubicacion" name="ubicacion" value="${bodegas.ubicacion}" />
-                
+
                 <label for="capacidad">Capacidad</label>
-                <input type="number" id="capacidad" name="capacidad" value="${bodegas.capacidad}" />
+                <input type="number" id="capacidad" name="capacidad" value="${bodegas.capacidad}" required />
                 
                 <label for="idSucursales">ID Sucursales</label>
-                <input type="number" id="idSucursales" name="idSucursales" value="${bodegas.idSucursales}" />
+                <input type="number" id="idSucursales" name="idSucursales" value="${bodegas.idSucursales}" required />
+				--%>
                 
+                <div class="form-group">
+			        <label for="nombre">Nombre:</label>
+			        <input type="text" class="form-control" id="nombre" name="nombre" value="${bodegas.nombre}" required />
+			    </div>                              
+                <div class="form-group">
+			        <label for="ubicacion">Ubicación</label>
+			        <input type="text" class="form-control" id="ubicacion" name="ubicacion" value="${bodegas.ubicacion}" />
+			    </div>
+                <div class="form-group">
+			        <label for="capacidad">Capacidad</label>
+			        <input type="number" class="form-control" id="capacidad" name="capacidad" value="${bodegas.capacidad}" required />
+			    </div>
+                <div class="form-group">
+			        <label for="idSucursales">ID Sucursales</label>
+			        <input type="number" class="form-control" id="idSucursales" name="idSucursales" value="${bodegas.idSucursales}" required />
+			    </div>
+                                                             
                 <div class="button-group">
                     <button class="btn btn-custom-save" type="submit">
                         <i class="fa-solid fa-pager"></i> Guardar 
@@ -111,21 +130,30 @@
 <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/bootstrap-table.min.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/bootstrap-table-es-MX.min.js"></script>
-<script type="text/javascript">
-    (() => {
-        'use strict'
-        const forms = document.querySelectorAll('.needs-validation')
-        Array.from(forms).forEach(form => {
-            form.addEventListener('submit', event => {
-                if (!form.checkValidity()) {
-                    event.preventDefault()
-                    event.stopPropagation()
-                }
-                form.classList.add('was-validated')
-            }, false)
-        })
-    })()
-</script>  
+
+	<script type="text/javascript">
+	
+	    // Example starter JavaScript for disabling form submissions if there are invalid fields
+	(() => {
+	  'use strict'
+
+	  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+	  const forms = document.querySelectorAll('.needs-validation')
+
+	  // Loop over them and prevent submission
+	  Array.from(forms).forEach(form => {
+	    form.addEventListener('submit', event => {
+	      if (!form.checkValidity()) {
+	        event.preventDefault()
+	        event.stopPropagation()
+	      }
+
+	      form.classList.add('was-validated')
+	    }, false)
+	  })
+	})()
+	
+	</script>
 </body>
 </html>
 
